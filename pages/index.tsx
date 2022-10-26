@@ -17,7 +17,15 @@ export async function getStaticProps() {
   };
 }
 
-const Home: NextPage = ({ allPostsData }: any) => {
+const Home = ({
+  allPostsData,
+}: {
+  allPostsData: {
+    date: string;
+    title: string;
+    id: string;
+  }[];
+}) => {
   return (
     <Layout home>
       <Head>

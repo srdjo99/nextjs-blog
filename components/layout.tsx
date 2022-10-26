@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
+import { ReactElement, ReactNode } from "react";
 
 const name = "Srdjan";
 export const siteTitle = "Next.js Sample Website";
@@ -12,7 +13,7 @@ export default function Layout({
   children,
   home,
 }: {
-  children?: JSX.Element | JSX.Element[];
+  children: ReactNode;
   home?: boolean;
 }) {
   return (
